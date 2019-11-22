@@ -1,0 +1,17 @@
+Instalar em novo PC:
+	python3 -m venv venv
+	source venv/bin/activate
+	pip install -r requirements.txt
+
+Iniciar projeto:
+	python manage.py runserver
+
+Caso ocorra o erro
+```
+django.core.exceptions.ImproperlyConfigured: Requested setting DEBUG, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+```
+executar isso primeiro:
+	export DJANGO_SETTINGS_MODULE=sos_pet.settings
+
+Para fazer migrações no banco de dados:
+	python manage.py migrate
