@@ -1,5 +1,4 @@
 from django.db import models
-from django.contrib.auth.models import User
 from django.db.models.fields import DateTimeField
 
 from .vaccine import Vaccine
@@ -12,7 +11,6 @@ class Pet(models.Model):
     description = models.TextField()
     phone = models.CharField(max_length=11, null=True)
     email = models.EmailField(null=True, blank=True)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
     created = models.DateTimeField(auto_now_add=True)
     active = models.BooleanField(default=True)
     photo = models.ImageField(upload_to='pet', blank=True, null=True)

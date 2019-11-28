@@ -2,7 +2,7 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from .views import PetList, PetDestroy, PetCreate, PetUpdate, PetGet, CategoryList, VaccineList
+from .views import PetList, PetDestroy, PetCreate, PetUpdate, PetGet, CategoryList, CategoryCreate, VaccineList, VaccineCreate
 
 urlpatterns = [
     path('pets/', PetList.as_view()),
@@ -11,5 +11,7 @@ urlpatterns = [
     path('pets/<pk>/', PetDestroy.as_view()),
     path('pets/get/<pk>', PetGet.as_view()),
     path('categories/', CategoryList.as_view()),
+    path('categories/add', CategoryCreate.as_view()),
     path('vaccines/', VaccineList.as_view()),
+    path('vaccines/add', VaccineCreate.as_view()),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

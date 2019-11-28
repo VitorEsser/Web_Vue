@@ -6,7 +6,7 @@ from .models import Pet, Vaccine, Category
 #admin.site.register(PetLost)
 @admin.register(Pet)
 class PetAdmin(admin.ModelAdmin):
-    list_display = ['id', 'name','city', 'user', 'description', 'active', 'photo', 'category_name',]
+    list_display = ['id', 'name','city', 'description', 'active', 'photo', 'category_name',]
     search_fields = ['id', 'name']
 
 @admin.register(Vaccine)

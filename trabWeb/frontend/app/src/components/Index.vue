@@ -1,7 +1,6 @@
 <template>
   <section class="container">
-    <h1>Página principal</h1>
-    <button v-if="authenticated">Logout</button>
+    <h1>BEM VINDO AO ADOTE E AME!!</h1>
   </section>
 </template>
 

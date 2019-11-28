@@ -7,3 +7,8 @@ class VaccineList(generics.ListAPIView):
     queryset = Vaccine.objects.all()
     serializer_class = VaccineSerializer
     permission_classes = ()
+
+class VaccineCreate(generics.CreateAPIView):
+    queryset = Vaccine.objects.all()
+    serializer_class = VaccineSerializer
+    permission_classes = ()

@@ -6,6 +6,7 @@ import Login from '@/views/Login'
 import Logout from '@/views/Logout'
 import ListPets from '@/components/Pets/List'
 import EditPet from'@/components/Pets/Edit'
+import ListVaccines from '@/components/Vaccines/List'
 import Experiments from '@/components/Experiments'
 
 Vue.use(Router)
@@ -38,6 +39,11 @@ export default new Router({
       path: '/pets/edit/:id',
       name: 'EditPet',
       component: EditPet
+    },
+    {
+    path: '/vaccines',
+    name: 'ListVaccine',
+    component: ListVaccines
     },
     {
       path: '/experiments',

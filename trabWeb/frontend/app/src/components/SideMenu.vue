@@ -54,10 +54,9 @@ export default {
       user: {},
       items: [
         { title: "Home", icon: "mdi-home-city", endpoint: '/' },
-        { title: "My Account", icon: "mdi-account", endpoint: '/user' },
-        { title: "Users", icon: "mdi-account-group", endpoint: '/users' },
-        { title: "Pets", icon: "mdi-library-books", endpoint: '/pets'},
-        { title: "Experiments", icon: "mdi-chart-pie", endpoint: '/experiments'}
+        { title: "Pets", icon: "mdi-account", endpoint: '/pets' },
+        { title: "Vacinas", icon: "mdi-account-group", endpoint: '/vaccines' },
+        { title: "Categorias", icon: "mdi-chart-pie", endpoint: '/categories'}
       ],
       items_logged: [
         { title: "Logout", icon: "mdi-logout", endpoint: '/logout'}

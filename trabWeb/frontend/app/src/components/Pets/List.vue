@@ -14,8 +14,8 @@
         </v-btn>
         <v-divider></v-divider>
       </div>
-      <CreatePets @updatePets="all"></CreatePets>
-  </v-container>
+      <CreatePets @updatePets="all" />
+    </v-container>
 </template>
 
 
@@ -32,7 +32,7 @@ export default {
     };
   },
   components: {
-    CreatePets: CreatePets,
+    CreatePets,
   },
   created() {
     this.all();
