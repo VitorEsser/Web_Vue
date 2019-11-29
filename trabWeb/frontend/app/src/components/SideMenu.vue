@@ -54,9 +54,9 @@ export default {
       user: {},
       items: [
         { title: "Home", icon: "mdi-home-city", endpoint: '/' },
-        { title: "Pets", icon: "mdi-account", endpoint: '/pets' },
-        { title: "Vacinas", icon: "mdi-account-group", endpoint: '/vaccines' },
-        { title: "Categorias", icon: "mdi-chart-pie", endpoint: '/categories'}
+        { title: "Pets", icon: "mdi-paw", endpoint: '/pets' },
+        { title: "Vacinas", icon: "mdi-needle", endpoint: '/vaccines' },
+        { title: "Categorias", icon: "mdi-tag", endpoint: '/categories'}
       ],
       items_logged: [
         { title: "Logout", icon: "mdi-logout", endpoint: '/logout'}

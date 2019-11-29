@@ -1,18 +1,16 @@
 <template>
   <v-container>
       <div v-for="pet in pets" v-bind:key="pet.id">
-        <p>{{pet.name}}</p>
-        <p>{{pet.vaccine}}</p>
-        <p>{{pet.description}}</p>
-        <p>{{pet.category_name}}</p>
+        <p><strong>Nome:</strong> {{pet.name}}</p>
+        <p><strong>Vacinas:</strong> {{pet.vaccines.name}}</p>
+        <p><strong>Descrição:</strong> {{pet.description}}</p>
+        <p><strong>Categoria:</strong> {{pet.category_name}}</p>
         
         <v-btn class="ma-2" text icon color="red lighten-2">
           <v-icon class="delete" @click="deletePet(pet)"></v-icon>
         </v-btn>
-        <v-btn class="ma-2" text icon color="green">
-          <v-icon class="edit" @click="editPet(pet)"></v-icon>
-        </v-btn>
         <v-divider></v-divider>
+        <br>
       </div>
       <CreatePets @updatePets="all" />
     </v-container>
@@ -64,9 +62,6 @@ export default {
           });
       }
     },
-    editPet(pet) {
-      router.push(`/pets/edit/${pet.id}`)
-    }
   }
 };
 </script>

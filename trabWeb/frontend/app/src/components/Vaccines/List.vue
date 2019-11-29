@@ -1,10 +1,12 @@
 <template>
   <v-container>
       <div v-for="vaccine in vaccines" v-bind:key="vaccine.id">
-        <p>{{vaccine.name}}</p>
-        <p>{{vaccine.description}}</p>
+        <br>
+        <p><strong>Nome:</strong> {{vaccine.name}}</p>
+        <p><strong>Descrição:</strong> <br>{{vaccine.description}}</p>
         
         <v-divider></v-divider>
+        <br>
       </div>
       <CreateVaccines @updateVaccines="all" />
   </v-container>

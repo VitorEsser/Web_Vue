@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <div>
-        <h1>Teste</h1>
+        <h1>Categoria dos Pets: </h1>
         <v-select
         :items = "items"
         item-value = "id"

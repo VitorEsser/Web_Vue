@@ -1,6 +1,7 @@
 <template>
   <section class="container">
-    <h1>BEM VINDO AO ADOTE E AME!!</h1>
+    <h1 align="center">BEM VINDO AO </h1> 
+    <h2 align="center">SOS - CLÍNICA DE VACINAÇÃO!!</h2>
   </section>
 </template>
 
