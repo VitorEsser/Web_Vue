@@ -2,7 +2,10 @@
   <v-container>
       <div v-for="pet in pets" v-bind:key="pet.id">
         <p><strong>Nome:</strong> {{pet.name}}</p>
-        <p><strong>Vacinas:</strong> {{pet.vaccines.name}}</p>
+        <strong>Vacinas:</strong>
+        <div v-for="vaccine in pet.vaccines" v-bind:key="vaccine.id">
+          <p> {{vaccine}}</p>
+        </div>
         <p><strong>Descrição:</strong> {{pet.description}}</p>
         <p><strong>Categoria:</strong> {{pet.category_name}}</p>
         
