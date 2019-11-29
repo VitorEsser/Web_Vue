@@ -6,8 +6,7 @@ from .category import Category
 
 
 class Pet(models.Model):
-    name = models.CharField(max_length=100) 
-    city = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
     description = models.TextField()
     phone = models.CharField(max_length=11, null=True)
     email = models.EmailField(null=True, blank=True)

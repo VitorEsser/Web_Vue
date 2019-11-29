@@ -7,7 +7,7 @@ class PetSerializer(serializers.ModelSerializer):
     class Meta:
         model = Pet
         fields = (
-            'id', 'name', 'city', 'email', 'phone',
+            'id', 'name', 'email', 'phone',
             'description', 'photo', 'created', 'active',
             'category', 'category_name', 'vaccines'
         )
@@ -18,7 +18,7 @@ class PetSerializer(serializers.ModelSerializer):
         if "vaccines" in self.initial_data:
             vaccines = self.initial_data.get("vaccines")
             for vaccine in vaccines:
-                vaccine_id = vaccine.get('id')
+                vaccine_id = vaccine.get("vaccine")
                 print(vaccine_id)
                 vaccine_instance = Vaccine.objects.get(pk=vaccine_id)
                 print(vaccine_instance)
@@ -39,5 +39,5 @@ class VaccineSerializer(serializers.ModelSerializer):
     class Meta:
         model = Vaccine
         fields = (
-            'id', 'name', 'amount', 'description'
+            'id', 'name', 'description'
         )

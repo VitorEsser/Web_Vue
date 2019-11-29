@@ -11,7 +11,7 @@ urlpatterns = [
     path('pets/<pk>/', PetDestroy.as_view()),
     path('pets/get/<pk>', PetGet.as_view()),
     path('categories/', CategoryList.as_view()),
-    path('categories/add', CategoryCreate.as_view()),
+    path('categories/add/', CategoryCreate.as_view()),
     path('vaccines/', VaccineList.as_view()),
-    path('vaccines/add', VaccineCreate.as_view()),
+    path('vaccines/add/', VaccineCreate.as_view()),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
