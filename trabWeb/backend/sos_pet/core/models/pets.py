@@ -31,6 +31,8 @@ class Pet(models.Model):
     def category_name(self):
         return self.category.name
 
+
+
 class PetVaccine(models.Model):
     pet = models.ForeignKey(
         'Pet',
