@@ -13,16 +13,13 @@
 
       <v-card>
         <v-card-title>
-          <span class="headline">Adicionar Vacinas</span>
+          <span class="headline">Adicionar Categorias</span>
         </v-card-title>
         <v-card-text>
           <v-container>
             <v-row>
               <v-col cols="12">
-                <v-text-field v-model="vaccines.name" label="Nome*" hint="Nome da Vacina" required></v-text-field>
-              </v-col>
-              <v-col cols="12">
-                <v-text-field v-model="vaccines.description" label="Descrição*" type="text" required></v-text-field>
+                <v-text-field v-model="categories.name" label="Nome*" hint="Nome da Categoria" required></v-text-field>
               </v-col>
             </v-row>
           </v-container>
@@ -40,26 +37,26 @@
 <script>
 import axios from "axios"
 export default {
-  name: "CreateVaccine",
+  name: "CreateCategories",
   data() {
     return {
       dialog: false,
-      vaccines: {},
+      categories: {},
     };
   
   },
   methods: {
     addvaccine(index) {
-      this.vaccines.push({ name: ''});
+      this.categoriespush({ name: ''});
     },
     removevaccine(index) {
       this.vaccines.splice(index, 1);
     },
     add() {
-      this.vaccines = this.vaccines
+      this.categories = this.categories
       axios
-        .post("http://localhost:8000/api/vaccines/add/",
-          this.vaccines, 
+        .post("http://localhost:8000/api/categories/add/",
+          this.categories, 
           {
             headers: {
               Authorization: `Token ${this.$session.get("token")}`
@@ -68,7 +65,7 @@ export default {
         )
         .then(response => {
           this.dialog = false
-          this.$emit('updateVaccines')
+          this.$emit('updateCategories')
         });
     }
   }

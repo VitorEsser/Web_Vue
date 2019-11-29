@@ -23,7 +23,7 @@
               </v-col>
               <v-row class="form-group" v-for="(input,k) in petvaccines" :key="k">
                 
-              <v-col cols="7">
+              <v-col cols="11">
                 <v-select
                   :items = "vaccines"
                   item-value = "id"

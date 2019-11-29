@@ -7,7 +7,7 @@ import Logout from '@/views/Logout'
 import ListPets from '@/components/Pets/List'
 import EditPet from'@/components/Pets/Edit'
 import ListVaccines from '@/components/Vaccines/List'
-import Experiments from '@/components/Experiments'
+import ListCategories from '@/components/Categories/List'
 
 Vue.use(Router)
 
@@ -46,9 +46,9 @@ export default new Router({
     component: ListVaccines
     },
     {
-      path: '/experiments',
-      name: 'Experiments',
-      component: Experiments
+      path: '/categories',
+      name: 'ListCategories',
+      component: ListCategories
     }
   ]
 })
