@@ -3,13 +3,24 @@ from rest_framework import serializers
 from core.models import Pet, Category, Vaccine, PetVaccine
 
 class PetSerializer(serializers.ModelSerializer):
+    vaccines = serializers.StringRelatedField(many=True)
+    class Meta:
+        model = Pet
+        fields = (
+            'id', 'name', 'email', 'phone',
+            'description', 'photo', 'created', 'active',
+            'category', 'category_name', 'vaccines',
+        )
+
+    
+class PetCreateSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Pet
         fields = (
             'id', 'name', 'email', 'phone',
             'description', 'photo', 'created', 'active',
-            'category', 'category_name', 'vaccines'
+            'category', 'category_name', 'vaccines',
         )
 
     @transaction.atomic
@@ -25,8 +36,6 @@ class PetSerializer(serializers.ModelSerializer):
                 PetVaccine(pet=pet, vaccine=vaccine_instance).save()
         pet.save()
         return pet
-
-    
 
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:

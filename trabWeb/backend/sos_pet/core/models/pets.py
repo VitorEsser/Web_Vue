@@ -31,6 +31,10 @@ class Pet(models.Model):
     def category_name(self):
         return self.category.name
 
+    @property
+    def vaccine_name(self):
+        return self.vaccines.name
+
 
 
 class PetVaccine(models.Model):

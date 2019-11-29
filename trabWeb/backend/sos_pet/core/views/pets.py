@@ -1,7 +1,7 @@
 from rest_framework import generics, permissions
 
 from core.models import Pet
-from core.serializers import PetSerializer
+from core.serializers import PetSerializer,PetCreateSerializer
 
 class PetList(generics.ListAPIView):
     queryset = Pet.objects.all()
@@ -10,7 +10,7 @@ class PetList(generics.ListAPIView):
 
 class PetDestroy(generics.DestroyAPIView):
     queryset = Pet.objects.all()
-    serializer_class = PetSerializer
+    serializer_class = PetCreateSerializer
     permission_classes = (
         permissions.IsAuthenticated,
     )
@@ -24,7 +24,7 @@ class PetUpdate(generics.UpdateAPIView):
 
 class PetCreate(generics.CreateAPIView):
     queryset = Pet.objects.all()
-    serializer_class = PetSerializer
+    serializer_class = PetCreateSerializer
     permission_classes = ()
 
 class PetGet(generics.RetrieveAPIView):
