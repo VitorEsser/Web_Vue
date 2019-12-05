@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar color="primary" dark flat>
+  <v-toolbar id="theme-toolbar">
     <v-toolbar-title>Autenticação</v-toolbar-title>
       <div class="flex-grow-1"></div>                
   </v-toolbar>
@@ -12,5 +12,7 @@ export default {
 </script>
 
 <style>
-
+  #theme-toolbar{
+    background-color: #4EC796;
+  }
 </style>

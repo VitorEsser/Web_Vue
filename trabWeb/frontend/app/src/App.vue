@@ -1,7 +1,7 @@
 <template>
   <v-app id="adoteEame">
     <ToolBar @toggle-drawer="$refs.drawer.drawer = !$refs.drawer.drawer"></ToolBar>
-    <SideMenu ref="drawer"></SideMenu>
+    <SideMenu id="sidemenu-theme" ref="drawer"></SideMenu>
     <v-content>
       <router-view></router-view>
     </v-content>
@@ -21,4 +21,11 @@ export default {
 };
 </script>
 
+<style>
+
+  #sidemenu-theme{
+    height: 300px !important;
+    border-bottom: 1px solid gray;
+  }
+</style>
 

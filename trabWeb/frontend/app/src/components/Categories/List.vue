@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <div>
-        <h1>Categoria dos Pets: </h1>
+        <h1 id="h1-category">Categoria dos Pets: </h1>
         <v-select
         :items = "items"
         item-value = "id"
@@ -54,3 +54,9 @@ export default {
   }
 };
 </script>
+
+<style>
+  #h1-category{
+    margin-top: 30%;
+  }
+</style>

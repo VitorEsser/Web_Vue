@@ -3,8 +3,8 @@
       <div v-for="pet in pets" v-bind:key="pet.id">
         <p><strong>Nome:</strong> {{pet.name}}</p>
         <strong>Vacinas:</strong>
-        <div v-for="vaccine in pet.vaccines" v-bind:key="vaccine.id">
-          <p> {{vaccine}}</p>
+        <div id="div-vaccine" v-for="vaccine in pet.vaccines" v-bind:key="vaccine.id">
+          <li> {{vaccine}}</li>
         </div>
         <p><strong>Descrição:</strong> {{pet.description}}</p>
         <p><strong>Categoria:</strong> {{pet.category_name}}</p>
@@ -68,3 +68,10 @@ export default {
   }
 };
 </script>
+
+<style>
+  #div-vaccine{
+    padding-left: 60px;
+    padding-bottom: 4px;
+  }
+</style>
